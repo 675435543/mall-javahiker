@@ -46,17 +46,17 @@ public class CommonResult<T> {
 
     /**
      * 失败返回结果
-     * @param message 提示信息
      */
-    public static <T> CommonResult<T> failed(String message) {
-        return new CommonResult<T>(ResultCode.FAILED.getCode(), message, null);
+    public static <T> CommonResult<T> failed() {
+        return failed(ResultCode.FAILED);
     }
 
     /**
      * 失败返回结果
+     * @param message 提示信息
      */
-    public static <T> CommonResult<T> failed() {
-        return failed(ResultCode.FAILED);
+    public static <T> CommonResult<T> failed(String message) {
+        return new CommonResult<T>(ResultCode.FAILED.getCode(), message, null);
     }
 
     /**

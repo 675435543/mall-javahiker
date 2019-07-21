@@ -43,7 +43,8 @@ public class PmsBrandServiceImpl implements PmsBrandService {
     @Override
     public List<PmsBrand> listBrand(int pageNum, int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
-        brandMapper.selectByExample(new PmsBrandExample());
+        //brandMapper.selectByExample(new PmsBrandExample());
+        //分页查询只对第一次有效
         return brandMapper.selectByExample(new PmsBrandExample());
     }
 
