@@ -4,7 +4,7 @@
 
     注意点
     为当前包下controller生成API文档
-    .apis(RequestHandlerSelectors.basePackage("com.macro.mall.tiny.controller"))
+    .apis(RequestHandlerSelectors.basePackage("com.javahiker.mall.controller"))
     为有@Api注解的Controller生成API文档
     .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
     为有@ApiOperation注解的方法生成API文档
