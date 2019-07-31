@@ -1,2 +1,6 @@
 mall06-elasticsearch 工程完全参考作者下面的教程搭建
 - [mall整合Elasticsearch实现商品搜索](https://juejin.im/post/5cfba3e9f265da1b614fea60)
+-  采坑，索引数据导入之后，工程启动起来报错，解决办法是删除es里面的索引
+
+
+    org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'esProductController': Unsatisfied dependency expressed through field 'esProductService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'esProductServiceImpl': Unsatisfied dependency expressed through field 'productRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'esProductRepository': Invocation of init method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.elasticsearch.repository.support.NumberKeyedRepository]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException: mapper [brandName] of different type, current_type [text], merged_type [keyword]
